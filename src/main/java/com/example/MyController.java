@@ -31,7 +31,7 @@ import lombok.NoArgsConstructor;
 @Path("/")
 public class MyController {
 	private final Models models;
-	
+
 	private final MessagesModel messagesModel;
 
 	private final LoginUserModel loginUserModel;
@@ -77,4 +77,17 @@ public class MyController {
 		messagesModel.clear();
 		return "redirect:list";
 	}
+
+	@GET
+	@Path("login")
+	public String getLogin() {
+		return "login.jsp";
+	}
+
+	@POST
+	@Path("login")
+	public String postLogin() {
+		return "redirect:list";
+	}
+
 }

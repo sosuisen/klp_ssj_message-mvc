@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,6 +23,9 @@
 	<c:forEach var="mes" items="${messagesModel}">
 		<div>${mes.name}:${mes.message}</div>
 	</c:forEach>
+    <p>
+        <a href="${mvc.basePath}/login">ログアウト</a>
+    </p>	
 	<p>
 	    <a href="${mvc.basePath}/">ホームへ戻る</a>
 	</p>
